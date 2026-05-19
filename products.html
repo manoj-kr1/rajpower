@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Products | Industrial Electrical Store</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+
+    /* PAGE LAYOUT */
+
+    .products-container{
+        display:flex;
+        min-height:100vh;
+    }
+
+    /* SIDEBAR */
+
+    .product-sidebar{
+        width:260px;
+        background:white;
+
+        padding:30px 20px;
+
+        border-right:1px solid #ddd;
+    }
+
+    .product-sidebar h2{
+        margin-bottom:25px;
+        color:#0b1f3a;
+    }
+
+    .product-list{
+        list-style:none;
+    }
+
+    .product-list li{
+        margin-bottom:15px;
+    }
+
+    .product-list a{
+        display:block;
+
+        padding:12px 15px;
+
+        background:#f4f6f9;
+        color:#0b1f3a;
+
+        text-decoration:none;
+        font-weight:bold;
+
+        border-radius:6px;
+
+        transition:0.3s;
+    }
+
+    .product-list a:hover{
+        background:#00bfff;
+        color:white;
+    }
+
+    /* RIGHT CONTENT */
+
+    .products-content{
+        flex:1;
+        padding:50px;
+    }
+
+    .products-content h1{
+        color:#0b1f3a;
+        margin-bottom:20px;
+    }
+
+    .products-content p{
+        color:#555;
+        margin-bottom:40px;
+        font-size:18px;
+    }
+
+    /* PRODUCT CARDS */
+
+    .category-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:30px;
+    }
+
+    .category-card{
+        background:white;
+
+        border-radius:12px;
+
+        overflow:hidden;
+
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+        transition:0.3s;
+    }
+
+    .category-card:hover{
+        transform:translateY(-8px);
+    }
+
+    .category-card img{
+        width:100%;
+        height:240px;
+        object-fit:cover;
+    }
+
+    .category-content{
+        padding:20px;
+    }
+
+    .category-content h3{
+        color:#0b1f3a;
+        margin-bottom:10px;
+    }
+
+    .category-content p{
+        font-size:15px;
+        margin-bottom:20px;
+    }
+
+    .open-btn{
+        display:block;
+
+        text-align:center;
+
+        padding:12px;
+
+        background:#0b1f3a;
+        color:white;
+
+        text-decoration:none;
+
+        border-radius:6px;
+
+        font-weight:bold;
+
+        transition:0.3s;
+    }
+
+    .open-btn:hover{
+        background:#00bfff;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+        .products-container{
+            flex-direction:column;
+        }
+
+        .product-sidebar{
+            width:100%;
+            border-right:none;
+            border-bottom:1px solid #ddd;
+        }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+ <a href="./index.html" class="logo">
+
+  <img src="./logo.jpg" alt="Logo">
+
+  <span>Industrial Electrical Store</span>
+
+</a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+
+</header>
+
+<!-- MAIN CONTAINER -->
+
+<div class="products-container">
+
+  <!-- LEFT SIDEBAR -->
+
+  <aside class="product-sidebar">
+
+    <h2>Product Categories</h2>
+
+    <ul class="product-list">
+
+      <li>
+        <a href="products/mcb.html">
+          MCB
+        </a>
+      </li>
+
+      <li>
+        <a href="products/contactor.html">
+          Contactor
+        </a>
+      </li>
+
+      <li>
+        <a href="products/limit-switch.html">
+          Limit Switch
+        </a>
+      </li>
+
+      <li>
+        <a href="products/plc.html">
+          PLC
+        </a>
+      </li>
+
+      <li>
+        <a href="products/sensor.html">
+          Sensors
+        </a>
+      </li>
+
+      <li>
+        <a href="products/relay.html">
+          Relay
+        </a>
+      </li>
+
+      <li>
+        <a href="products/push-button.html">
+          Push Button
+        </a>
+      </li>
+	  <li>
+        <a href="products/cables.html">
+          Cables and Wire
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- RIGHT CONTENT -->
+
+  <section class="products-content">
+
+    <h1>Industrial Electrical Products</h1>
+
+    <p>
+      Browse industrial electrical products by category.
+      Choose MCB, Contactors, Limit Switches, PLC,
+      Sensors and more.
+    </p>
+
+    <!-- CATEGORY GRID -->
+
+    <div class="category-grid">
+
+      <!-- MCB -->
+
+      <div class="category-card">
+
+        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1000&auto=format&fit=crop">
+
+        <div class="category-content">
+
+          <h3>MCB Collection</h3>
+
+          <p>
+            Industrial MCBs from leading brands.
+          </p>
+
+          <a href="products/mcb.html"
+             class="open-btn">
+             Open
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- CONTACTOR -->
+
+      <div class="category-card">
+
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop">
+
+        <div class="category-content">
+
+          <h3>Industrial Contactors</h3>
+
+          <p>
+            Heavy duty contactors for industries.
+          </p>
+
+          <a href="products/contactor.html"
+             class="open-btn">
+             Open
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- LIMIT SWITCH -->
+
+      <div class="category-card">
+
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop">
+
+        <div class="category-content">
+
+          <h3>Limit Switches</h3>
+
+          <p>
+            Industrial limit switches for automation.
+          </p>
+
+          <a href="products/limit-switch.html"
+             class="open-btn">
+             Open
+          </a>
+
+        </div>
+
+      </div>
+	  
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 Industrial Electrical Store | All Rights Reserved
+  </p>
+
+</footer>
+
+</body>
+</html>

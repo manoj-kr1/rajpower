@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MCB Products</title>
+
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <style>
+
+    /* PAGE LAYOUT */
+
+    .mcb-container{
+        display:flex;
+        min-height:100vh;
+    }
+
+    /* SIDEBAR */
+
+    .brand-sidebar{
+        width:260px;
+        background:white;
+        padding:30px 20px;
+        border-right:1px solid #ddd;
+    }
+
+    .brand-sidebar h2{
+        margin-bottom:25px;
+        color:#0b1f3a;
+    }
+
+    .brand-list{
+        list-style:none;
+    }
+
+    .brand-list li{
+        margin-bottom:15px;
+    }
+
+    .brand-list a{
+        display:block;
+        padding:12px 15px;
+
+        text-decoration:none;
+
+        background:#f4f6f9;
+        color:#0b1f3a;
+
+        border-radius:6px;
+
+        font-weight:bold;
+
+        transition:0.3s;
+    }
+
+    .brand-list a:hover{
+        background:#00bfff;
+        color:white;
+    }
+/* BRAND BUTTONS */
+
+.brand-list button{
+    width:100%;
+
+    padding:12px 15px;
+
+    background:#f4f6f9;
+    color:#0b1f3a;
+
+    border:none;
+
+    text-align:left;
+
+    font-weight:bold;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.brand-list button:hover{
+    background:#00bfff;
+    color:white;
+}
+    /* PRODUCT AREA */
+
+    .mcb-products{
+        flex:1;
+        padding:40px;
+    }
+
+    .mcb-products h1{
+        margin-bottom:40px;
+        color:#0b1f3a;
+    }
+
+    /* PRODUCT GRID */
+
+    .product-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+        gap:30px;
+    }
+
+    /* PRODUCT CARD */
+
+    .product-card{
+        background:white;
+
+        border-radius:12px;
+
+        overflow:hidden;
+
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+        transition:0.3s;
+    }
+
+    .product-card:hover{
+        transform:translateY(-8px);
+    }
+
+    .product-card img{
+        width:100%;
+        height:240px;
+        object-fit:cover;
+    }
+
+    /* PRODUCT CONTENT */
+
+    .product-content{
+        padding:20px;
+    }
+
+    .product-content h3{
+        color:#0b1f3a;
+        margin-bottom:10px;
+    }
+
+    .product-content p{
+        color:#555;
+        margin-bottom:10px;
+    }
+
+    .price{
+        font-size:24px;
+        font-weight:bold;
+        color:#00bfff;
+        margin:15px 0;
+    }
+
+    /* BUTTON */
+
+    .quote-btn{
+        display:block;
+
+        text-align:center;
+
+        padding:12px;
+
+        background:#0b1f3a;
+        color:white;
+
+        text-decoration:none;
+
+        border-radius:6px;
+
+        font-weight:bold;
+
+        transition:0.3s;
+    }
+
+    .quote-btn:hover{
+        background:#00bfff;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+        .mcb-container{
+            flex-direction:column;
+        }
+
+        .brand-sidebar{
+            width:100%;
+            border-right:none;
+            border-bottom:1px solid #ddd;
+        }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+ <a href="../index.html" class="logo">
+
+  <img src="../logo.jpg" alt="Logo">
+
+  <span>Industrial Electrical Store</span>
+
+</a>
+
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../products.html" class="active">Products</a>
+    <a href="../index.html#about">About</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+
+</header>
+
+<!-- MAIN CONTAINER -->
+
+<div class="mcb-container">
+
+  <!-- LEFT SIDEBAR -->
+
+  <aside class="brand-sidebar">
+
+    <h2>Brands</h2>
+
+    <ul class="brand-list">
+
+  <li>
+    <button onclick="filterProducts('all')">
+      All Brands
+    </button>
+  </li>
+
+
+	
+	  <li>
+		<button onclick="filterProducts('teknic')">
+		Teknic
+		</button>
+		</li>
+
+  <li>
+    <button onclick="filterProducts('lnt')">
+      L&T
+    </button>
+  </li>
+
+  <li>
+    <button onclick="filterProducts('havells')">
+      Havells
+    </button>
+  </li>
+
+  <li>
+    <button onclick="filterProducts('schneider')">
+      Schneider
+    </button>
+  </li>
+
+  <li>
+    <button onclick="filterProducts('abb')">
+      ABB
+    </button>
+  </li>
+
+  <li>
+    <button onclick="filterProducts('siemens')">
+      Siemens
+    </button>
+  </li>
+
+</ul>
+
+  </aside>
+
+  <!-- RIGHT PRODUCTS -->
+
+  <section class="mcb-products">
+
+    <h1>MCB Collection</h1>
+
+    <div class="product-grid">
+
+      <!-- PRODUCT 1 -->
+
+      <div class="product-card havells">
+
+        <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1000&auto=format&fit=crop">
+
+        <div class="product-content">
+
+          <h3>Havells 32A MCB</h3>
+
+          <p>Single Pole Industrial MCB</p>
+
+          <div class="price">₹850</div>
+
+          <a href="https://wa.me/919876543210"
+             target="_blank"
+             class="quote-btn">
+             Get Quotation
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 2 -->
+
+      <div class="product-card schneider">
+
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop">
+
+        <div class="product-content">
+
+          <h3>Schneider 63A MCB</h3>
+
+          <p>Double Pole Industrial MCB</p>
+
+          <div class="price">₹1450</div>
+
+          <a href="https://wa.me/919876543210"
+             target="_blank"
+             class="quote-btn">
+             Get Quotation
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 3 -->
+
+      <div class="product-card abb">
+
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1000&auto=format&fit=crop">
+
+        <div class="product-content">
+
+          <h3>ABB 100A MCB</h3>
+
+          <p>Triple Pole Heavy Duty MCB</p>
+
+          <div class="price">₹2450</div>
+
+          <a href="https://wa.me/919876543210"
+             target="_blank"
+             class="quote-btn">
+             Get Quotation
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 Industrial Electrical Store | All Rights Reserved
+  </p>
+
+</footer>
+<script>
+
+function filterProducts(brand){
+
+    let products =
+    document.querySelectorAll('.product-card');
+
+    products.forEach(function(product){
+
+        if(brand === 'all'){
+
+            product.style.display = 'block';
+
+        }
+
+        else if(product.classList.contains(brand)){
+
+            product.style.display = 'block';
+
+        }
+
+        else{
+
+            product.style.display = 'none';
+
+        }
+
+    });
+
+}
+
+</script>
+</body>
+</html>
