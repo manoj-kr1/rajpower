@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Polycab Cables</title>
+
+  <!-- MAIN CSS -->
+
+  <link rel="stylesheet"
+        href="../../css/styles.css">
+
+  <style>
+
+    /* PAGE LAYOUT */
+
+    .cable-container{
+
+        display:flex;
+
+        min-height:100vh;
+    }
+
+    /* SIDEBAR */
+
+    .brand-sidebar{
+
+        width:260px;
+
+        background:white;
+
+        padding:30px 20px;
+
+        border-right:1px solid #ddd;
+    }
+
+    .brand-sidebar h2{
+
+        margin-bottom:25px;
+
+        color:#0b1f3a;
+    }
+
+    .brand-list{
+
+        list-style:none;
+    }
+
+    .brand-list li{
+
+        margin-bottom:15px;
+    }
+
+    /* SIDEBAR LINKS */
+
+    .brand-list a{
+
+        display:block;
+
+        width:100%;
+
+        padding:12px 15px;
+
+        background:#f4f6f9;
+
+        color:#0b1f3a;
+
+        text-decoration:none;
+
+        font-weight:bold;
+
+        border-radius:6px;
+
+        transition:0.3s;
+    }
+
+    .brand-list a:hover{
+
+        background:#00bfff;
+
+        color:white;
+    }
+
+    /* ACTIVE BRAND */
+
+    .active-brand{
+
+        background:#00bfff !important;
+
+        color:white !important;
+    }
+
+    /* PRODUCT AREA */
+
+    .cable-products{
+
+        flex:1;
+
+        padding:40px;
+    }
+
+    .cable-products h1{
+
+        margin-bottom:40px;
+
+        color:#0b1f3a;
+    }
+
+    /* PRODUCT GRID */
+
+    .product-grid{
+
+        display:grid;
+
+        grid-template-columns:
+        repeat(auto-fit,minmax(280px,1fr));
+
+        gap:30px;
+    }
+
+    /* PRODUCT CARD */
+
+    .product-card{
+
+        background:white;
+
+        border-radius:12px;
+
+        overflow:hidden;
+
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+        transition:0.3s;
+    }
+
+    .product-card:hover{
+
+        transform:translateY(-8px);
+    }
+
+    .product-card img{
+
+        width:100%;
+
+        height:240px;
+
+        object-fit:cover;
+    }
+
+    /* PRODUCT CONTENT */
+
+    .product-content{
+
+        padding:20px;
+    }
+
+    .product-content h3{
+
+        color:#0b1f3a;
+
+        margin-bottom:10px;
+    }
+
+    .product-content p{
+
+        color:#555;
+
+        margin-bottom:10px;
+    }
+
+    .price{
+
+        font-size:24px;
+
+        font-weight:bold;
+
+        color:#00bfff;
+
+        margin:15px 0;
+    }
+
+    /* BUTTON */
+
+    .quote-btn{
+
+        display:block;
+
+        text-align:center;
+
+        padding:12px;
+
+        background:#0b1f3a;
+
+        color:white;
+
+        text-decoration:none;
+
+        border-radius:6px;
+
+        font-weight:bold;
+
+        transition:0.3s;
+    }
+
+    .quote-btn:hover{
+
+        background:#00bfff;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+        .cable-container{
+
+            flex-direction:column;
+        }
+
+        .brand-sidebar{
+
+            width:100%;
+
+            border-right:none;
+
+            border-bottom:1px solid #ddd;
+        }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <a href="../../index.html"
+     class="logo">
+
+    <img src="../../logo.jpg"
+         alt="Logo">
+
+    <span>
+      Industrial Electrical Store
+    </span>
+
+  </a>
+
+  <nav>
+
+    <a href="../../index.html">
+      Home
+    </a>
+
+    <a href="../../products.html"
+       class="active">
+       Products
+    </a>
+
+    <a href="../../index.html#about">
+      About
+    </a>
+
+    <a href="../../index.html#contact">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+<!-- MAIN CONTAINER -->
+
+<div class="cable-container">
+
+  <!-- SIDEBAR -->
+
+  <aside class="brand-sidebar">
+
+    <h2>Brands</h2>
+
+    <ul class="brand-list">
+
+      <li>
+  <a href="../cables.html">
+     All Brands
+  </a>
+</li>
+	  
+	  
+	  <li>
+        <a href="polycab.html">
+           
+           Polycab
+        </a>
+      </li>
+
+      <li>
+        <a href="havells.html"
+		     class="active-brand">
+          Havells
+        </a>
+      </li>
+
+      <li>
+        <a href="finolex.html">
+          Finolex
+        </a>
+      </li>
+
+      <li>
+        <a href="kei.html">
+          KEI
+        </a>
+      </li>
+
+      <li>
+        <a href="rr.html">
+          RR Kabel
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- PRODUCT AREA -->
+
+  <section class="cable-products">
+
+    <h1>Havells Industrial Cables</h1>
+
+    <div class="product-grid">
+
+      <!-- PRODUCT 1 -->
+
+      <div class="product-card">
+
+        <img src="havells/havells1.jpeg">
+
+        <div class="product-content">
+
+          <h3>Hevells Copper Cable</h3>
+
+          <p>
+            Industrial Heavy Duty Copper Cable
+          </p>
+
+          <div class="price">
+            ₹2460
+          </div>
+
+          <a href="havells/havells1.html"
+             class="quote-btn">
+
+            Details
+
+         </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 2 -->
+
+     <div class="product-card">
+
+        <img src="havells/havells2.jpeg">
+
+        <div class="product-content">
+
+          <h3>Hevells Copper Cable</h3>
+
+          <p>
+            Industrial Heavy Duty Copper Cable
+          </p>
+
+          <div class="price">
+            ₹2460
+          </div>
+
+          <a href="havells/havells2.html"
+             class="quote-btn">
+
+            Details
+
+         </a>
+
+        </div>
+
+      </div>
+	  
+	  <!-- PRODUCT 3 -->
+
+      <div class="product-card">
+
+        <img src="havells/havells3.jpeg">
+
+        <div class="product-content">
+
+          <h3>Hevells Copper Cable</h3>
+
+          <p>
+            Industrial Heavy Duty Copper Cable
+          </p>
+
+          <div class="price">
+            ₹2460
+          </div>
+
+          <a href="havells/havells3.html"
+             class="quote-btn">
+
+            Details
+
+         </a>
+
+        </div>
+
+      </div>
+	  
+	  <!-- PRODUCT 4 -->
+
+      <div class="product-card">
+
+        <img src="havells/havells4.jpeg">
+
+        <div class="product-content">
+
+          <h3>Hevells Copper Cable</h3>
+
+          <p>
+            Industrial Heavy Duty Copper Cable
+          </p>
+
+          <div class="price">
+            ₹2460
+          </div>
+
+          <a href="havells/havells4.html"
+             class="quote-btn">
+
+            Details
+
+         </a>
+
+        </div>
+
+      </div>
+
+      <!-- PRODUCT 5 -->
+
+      <div class="product-card">
+
+        <img src="havells/havells5.jpeg">
+
+        <div class="product-content">
+
+          <h3>Hevells Copper Cable</h3>
+
+          <p>
+            Industrial Heavy Duty Copper Cable
+          </p>
+
+          <div class="price">
+            ₹2460
+          </div>
+
+          <a href="havells/havells5.html"
+             class="quote-btn">
+
+            Details
+
+         </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 Industrial Electrical Store |
+    All Rights Reserved
+  </p>
+
+</footer>
+
+</body>
+</html>

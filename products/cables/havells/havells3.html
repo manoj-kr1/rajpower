@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Havells Flexible Cable</title>
+
+  <!-- MAIN CSS -->
+
+  <link rel="stylesheet"
+        href="../../../css/styles.css">
+
+<style>
+
+
+    /* DETAILS PAGE */
+
+    .details-container{
+
+        max-width:1300px;
+
+        margin:auto;
+
+        padding:60px 30px;
+
+        display:grid;
+
+        grid-template-columns:
+        1fr 1fr;
+
+        gap:60px;
+    }
+
+    /* IMAGE */
+
+    .details-image{
+
+        background:white;
+
+        padding:20px;
+
+        border-radius:15px;
+
+        box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .details-image img{
+
+        width:100%;
+
+        border-radius:12px;
+    }
+
+    /* CONTENT */
+
+    .details-content h1{
+
+        color:#0b1f3a;
+
+        font-size:38px;
+
+        margin-bottom:15px;
+    }
+
+    .brand{
+
+        color:#00bfff;
+
+        font-size:18px;
+
+        font-weight:bold;
+
+        margin-bottom:20px;
+    }
+
+    .description{
+
+        color:#555;
+
+        line-height:1.9;
+
+        margin-bottom:25px;
+
+        font-size:16px;
+    }
+
+    /* FEATURES */
+
+    .features{
+
+        margin-bottom:30px;
+    }
+
+    .features li{
+
+        margin-bottom:12px;
+
+        color:#333;
+
+        font-size:16px;
+    }
+
+    /* PRICE */
+
+    .price{
+
+        font-size:36px;
+
+        font-weight:bold;
+
+        color:#00bfff;
+
+        margin-bottom:25px;
+    }
+
+    /* BUTTONS */
+
+    .button-group{
+
+        display:flex;
+
+        gap:20px;
+
+        flex-wrap:wrap;
+    }
+
+    .buy-btn,
+    .quote-btn{
+
+        padding:14px 30px;
+
+        border-radius:8px;
+
+        text-decoration:none;
+
+        font-weight:bold;
+
+        transition:0.3s;
+    }
+
+    .buy-btn{
+
+        background:#0b1f3a;
+
+        color:white;
+    }
+
+    .buy-btn:hover{
+
+        background:#00bfff;
+    }
+
+    .quote-btn{
+
+        border:2px solid #0b1f3a;
+
+        color:#0b1f3a;
+    }
+
+    .quote-btn:hover{
+
+        background:#0b1f3a;
+
+        color:white;
+    }
+
+    /* PRODUCT DETAILS */
+
+    .product-specs{
+
+        margin-top:40px;
+
+        background:#f7f9fc;
+
+        padding:25px;
+
+        border-radius:12px;
+    }
+
+    .product-specs h3{
+
+        margin-bottom:20px;
+
+        color:#0b1f3a;
+    }
+
+    .spec-row{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        padding:12px 0;
+
+        border-bottom:1px solid #ddd;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+        .details-container{
+
+            grid-template-columns:1fr;
+        }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <a href="../../../index.html"
+     class="logo">
+
+    <img src="../../../logo.jpg"
+         alt="Logo">
+
+    <span>
+      Industrial Electrical Store
+    </span>
+
+  </a>
+
+  <nav>
+
+    <a href="../../../index.html">
+      Home
+    </a>
+
+    <a href="../../../products.html"
+       class="active">
+       Products
+    </a>
+
+    <a href="../../../index.html#about">
+      About
+    </a>
+
+    <a href="../../../index.html#contact">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+<!-- DETAILS SECTION -->
+
+<section class="details-container">
+
+  <!-- IMAGE -->
+
+  <div class="details-image">
+
+    <img src="havells3.jpeg">
+
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="details-content">
+
+    <h1>Havells Flexible Cable</h1>
+
+    <p class="description">
+
+  Premium quality Havells flexible cable
+  designed for industrial power systems,
+  electrical panel wiring, machinery
+  connections and commercial electrical
+  installations.
+
+  Manufactured using high-grade copper
+  conductor and advanced insulation
+  technology to ensure superior electrical
+  conductivity, enhanced safety and
+  long-lasting performance under demanding
+  industrial environments.
+
+  Ideal for factories, automation systems,
+  commercial buildings and heavy-duty
+  electrical applications.
+
+</p>
+<ul class="features">
+
+  <li>
+    ✔ High Conductivity Copper Conductor
+  </li>
+
+  <li>
+    ✔ Flexible Heavy Duty Cable
+  </li>
+
+  <li>
+    ✔ Heat & Flame Resistant Insulation
+  </li>
+
+  <li>
+    ✔ Industrial Grade Durability
+  </li>
+
+  <li>
+    ✔ Reliable Long Service Life
+  </li>
+
+</ul>
+
+<div class="product-specs">
+
+  <h3>
+    Product Specifications
+  </h3>
+
+  <div class="spec-row">
+
+    <span>Brand</span>
+
+    <span>Havells</span>
+
+  </div>
+
+  <div class="spec-row">
+
+    <span>Type</span>
+
+    <span>Flexible Cable</span>
+
+  </div>
+
+  <div class="spec-row">
+
+    <span>Conductor</span>
+
+    <span>Copper</span>
+
+  </div>
+
+  <div class="spec-row">
+
+    <span>Application</span>
+
+    <span>Industrial Wiring</span>
+
+  </div>
+
+  <div class="spec-row">
+
+    <span>Voltage</span>
+
+    <span>1100V</span>
+
+  </div>
+
+</div>
+
+
+<div class="price">
+
+      ₹2460
+
+    </div>
+<!-- BUTTONS -->
+
+<div class="button-group">
+
+  <a href="https://wa.me/919876543210"
+     target="_blank"
+     class="buy-btn">
+
+     Buy Now
+
+  </a>
+
+  <a href="https://wa.me/919876543210"
+     target="_blank"
+     class="quote-btn">
+
+     Request Quotation
+
+  </a>
+
+</div>
+
+    
+
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+  <p>
+    © 2026 Industrial Electrical Store |
+    All Rights Reserved
+  </p>
+
+</footer>
+
+</body>
+</html>

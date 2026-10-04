@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>RR Industrial Cable</title>
+
+  <!-- MAIN CSS -->
+
+  <link rel="stylesheet"
+        href="../../../css/styles.css">
+
+  <style>
+  .brand-sidebar{
+
+    width:260px;
+
+    background:white;
+
+    padding:30px 20px;
+
+    border-right:1px solid #ddd;
+}
+
+.brand-sidebar h2{
+
+    margin-bottom:25px;
+
+    color:#0b1f3a;
+}
+
+.brand-list{
+
+    list-style:none;
+}
+
+.brand-list li{
+
+    margin-bottom:15px;
+}
+
+.brand-list a{
+
+    display:block;
+
+    width:100%;
+
+    padding:12px 15px;
+
+    background:#f4f6f9;
+
+    color:#0b1f3a;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    border-radius:6px;
+
+    transition:0.3s;
+}
+
+.brand-list a:hover{
+
+    background:#00bfff;
+
+    color:white;
+}
+
+.active-brand{
+
+    background:#00bfff !important;
+
+    color:white !important;
+}
+
+.product-layout{
+
+    display:flex;
+
+    max-width:1600px;
+
+    margin:auto;
+}
+
+    /* DETAILS PAGE */
+
+    .details-container{
+
+        max-width:1300px;
+
+        margin:auto;
+
+        padding:60px 30px;
+
+        display:grid;
+
+        grid-template-columns:
+        1fr 1fr;
+
+        gap:60px;
+    }
+
+    /* IMAGE */
+
+.details-image{
+
+    background:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    height:fit-content;
+}
+
+.details-image img{
+
+    width:100%;
+
+    max-width:500px;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+}
+
+    /* CONTENT */
+
+    .details-content h1{
+
+        color:#0b1f3a;
+
+        font-size:38px;
+
+        margin-bottom:10px;
+    }
+
+    .brand{
+
+    color:#00bfff;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-top:30px;
+
+    margin-bottom:20px;
+}
+
+    .description{
+
+        color:#555;
+
+        line-height:1.9;
+
+        margin-bottom:25px;
+
+        font-size:16px;
+    }
+
+    /* FEATURES */
+
+    .features{
+
+        margin-bottom:30px;
+    }
+
+    .features li{
+
+        margin-bottom:12px;
+
+        color:#333;
+
+        font-size:16px;
+    }
+
+    /* PRICE */
+
+    .price{
+
+        font-size:36px;
+
+        font-weight:bold;
+
+        color:#00bfff;
+
+        margin:30px 0 20px;
+    }
+
+    /* BUTTONS */
+
+    .button-group{
+
+        display:flex;
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+        margin-top:25px;
+    }
+
+    .buy-btn,
+    .quote-btn{
+
+        padding:14px 30px;
+
+        border-radius:8px;
+
+        text-decoration:none;
+
+        font-weight:bold;
+
+        transition:0.3s;
+
+        border:2px solid #0b1f3a;
+
+        background:white;
+
+        color:#0b1f3a;
+    }
+
+    /* HOVER EFFECT */
+
+    .buy-btn:hover,
+    .quote-btn:hover{
+
+        background:#00bfff;
+
+        border-color:#00bfff;
+
+        color:white;
+    }
+
+    /* PRODUCT DETAILS */
+
+    .product-specs{
+
+        margin-top:40px;
+
+        background:#f7f9fc;
+
+        padding:25px;
+
+        border-radius:12px;
+    }
+
+    .product-specs h3{
+
+        margin-bottom:20px;
+
+        color:#0b1f3a;
+    }
+
+    .spec-row{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        padding:12px 0;
+
+        border-bottom:1px solid #ddd;
+    }
+
+    /* MOBILE */
+
+    @media(max-width:900px){
+
+        .details-container{
+
+            grid-template-columns:1fr;
+        }
+
+    }
+.left-column{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+}
+
+.product-info-box{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.product-info-box h3{
+
+    color:#0b1f3a;
+
+    margin-top:20px;
+
+    margin-bottom:10px;
+}
+
+.product-info-box h3:first-child{
+
+    margin-top:0;
+}
+
+.product-info-box ul{
+
+    padding-left:20px;
+}
+
+.product-info-box li{
+
+    margin-bottom:8px;
+}
+
+.doc-btn{
+
+    display:inline-block;
+
+    padding:10px 18px;
+
+    border:2px solid #0b1f3a;
+
+    border-radius:6px;
+
+    text-decoration:none;
+
+    color:#0b1f3a;
+
+    font-weight:bold;
+}
+
+.doc-btn:hover{
+
+    background:#00bfff;
+
+    border-color:#00bfff;
+
+    color:white;
+}
+  </style>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+  <a href="../../../index.html"
+     class="logo">
+
+    <img src="../../../logo.jpg">
+
+    <span>
+      Industrial Electrical Store
+    </span>
+
+  </a>
+
+  <nav>
+
+    <a href="../../../index.html">
+      Home
+    </a>
+
+    <a href="../../../products.html"
+       class="active">
+       Products
+    </a>
+
+    <a href="../../../index.html#about">
+      About
+    </a>
+
+    <a href="../../../index.html#contact">
+      Contact
+    </a>
+
+  </nav>
+
+</header>
+
+<div class="product-layout">
+
+  <aside class="brand-sidebar">
+
+<!-- BACK BUTTON -->
+
+<div class="back-container">
+
+  <a href="../rr.html"
+     class="back-btn">
+
+     ← Back to Cables
+
+  </a>
+
+</div>
+    <h2>Available Sizes</h2>
+
+    <ul class="brand-list">
+
+  <li>
+  <a href="#"
+     class="active-brand"
+                onclick="changePrice('₹850', this)">0.5 Sq.mm</a></li>
+<li><a href="#" onclick="changePrice('₹1150', this)">0.75 Sq.mm</a></li>
+<li><a href="#" onclick="changePrice('₹1450', this)">1 Sq.mm</a></li>
+<li><a href="#" onclick="changePrice('₹2100', this)">1.5 Sq.mm</a></li>
+<li><a href="#" onclick="changePrice('₹3200', this)">2.5 Sq.mm</a></li>
+
+</ul>
+
+  </aside>
+
+  <main class="main-content">
+<!-- DETAILS SECTION -->
+
+<section class="details-container">
+
+  <!-- IMAGE -->
+
+  <div class="left-column">
+
+    <div class="details-image">
+
+        <img src="rr1.jpeg">
+
+    </div>
+
+    <div class="product-info-box">
+
+        <h3>Product Highlights</h3>
+
+        <ul>
+            <li>✔ High Conductivity Copper Conductor</li>
+            <li>✔ Industrial Grade Insulation</li>
+            <li>✔ Reliable Heavy Duty Performance</li>
+            <li>✔ Heat & Moisture Resistant</li>
+        </ul>
+
+        <h3>Technical Documents</h3>
+
+        <a href="#" class="doc-btn">
+            Download Brochure
+        </a>
+
+        <h3>Cable Standards</h3>
+
+        <p>ISI, BIS Certified</p>
+
+        <h3>Availability</h3>
+
+        <p>✓ In Stock</p>
+
+        <h3>Delivery</h3>
+
+        <p>Dispatch within 24-48 Hours</p>
+
+        <h3>Warranty</h3>
+
+        <p>Manufacturer Warranty Available</p>
+
+    </div>
+
+</div>
+
+  <!-- CONTENT -->
+
+  <div class="details-content">
+
+    <h1>
+      RR Industrial Cable
+    </h1>
+	 <!-- PRICE -->
+
+      <div class="price" id="product-price">
+
+  ₹850
+
+</div>
+ <!-- BUTTONS -->
+
+      <div class="button-group">
+
+        <a href="https://wa.me/919876543210"
+           target="_blank"
+           class="buy-btn">
+
+           Buy Now
+
+        </a>
+
+        <a href="https://wa.me/919876543210"
+           target="_blank"
+           class="quote-btn">
+
+           Request Quotation
+
+        </a></div>
+	
+    <div class="brand">
+
+      Brand: RR Kabel
+
+    </div>
+
+    <p class="description">
+
+      Premium quality RR industrial cable
+      designed for industrial power
+      distribution, machinery wiring,
+      control panels and commercial
+      electrical installations.
+
+      Manufactured using high-grade copper
+      conductor and advanced insulation
+      technology to deliver superior
+      electrical performance, enhanced
+      safety and long operational life.
+
+      Engineered for reliable performance
+      under demanding industrial conditions
+      and continuous heavy electrical load.
+
+    </p>
+
+    <!-- FEATURES -->
+
+    <ul class="features">
+
+      <li>
+        ✔ High Conductivity Copper Core
+      </li>
+
+      <li>
+        ✔ Heavy Duty Industrial Performance
+      </li>
+
+      <li>
+        ✔ Heat & Moisture Resistant
+      </li>
+
+      <li>
+        ✔ Superior Insulation Protection
+      </li>
+
+      <li>
+        ✔ Reliable Long-Term Operation
+      </li>
+
+    </ul>
+
+    <!-- SPECIFICATIONS -->
+
+    <div class="product-specs">
+
+      <h3>
+        Product Specifications
+      </h3>
+
+      <div class="spec-row">
+
+        <span>Brand</span>
+
+        <span>RR Kabel</span>
+
+      </div>
+
+      <div class="spec-row">
+
+        <span>Type</span>
+
+        <span>Industrial Cable</span>
+
+      </div>
+
+      <div class="spec-row">
+
+        <span>Conductor</span>
+
+        <span>Copper</span>
+
+      </div>
+
+      <div class="spec-row">
+
+        <span>Application</span>
+
+        <span>Industrial Wiring</span>
+
+      </div>
+
+      <div class="spec-row">
+
+        <span>Voltage</span>
+
+        <span>1100V</span>
+
+      </div>
+
+      
+<script>
+
+function changePrice(price, element){
+
+    document.getElementById("product-price").innerHTML = price;
+
+    // Remove active class from all size buttons
+
+    let buttons = document.querySelectorAll(".brand-list a");
+
+    buttons.forEach(btn => {
+        btn.classList.remove("active-brand");
+    });
+
+    // Highlight selected size
+
+    element.classList.add("active-brand");
+
+}
+
+</script>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+</div>
+<footer>
+
+  <p>
+    © 2026 Industrial Electrical Store |
+    All Rights Reserved
+  </p>
+
+</footer>
+
+</body>
+</html>
